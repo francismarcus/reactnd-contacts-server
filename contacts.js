@@ -4,24 +4,23 @@ const config = require('./config')
 const db = {}
 
 const defaultData = {
-  contacts: [
-    {
-      id: 'richard',
-      name: 'Richard Kalehoff',
-      handle: '@richardkalehoff',
-      avatarURL: config.origin + '/richard.jpg'
+  contacts: [{
+      id: 'celery',
+      name: 'Celery Spaghetti',
+      handle: '@Celery',
+      avatarURL: config.origin + '/celery.jpg'
     },
     {
-      id: 'karen',
-      name: 'Karen Isgrigg',
-      handle: '@karen_isgrigg',
-      avatarURL: config.origin + '/karen.jpg'
+      id: 'grey',
+      name: 'Mr. Light Grey',
+      handle: '@Greygrey',
+      avatarURL: config.origin + '/grey.jpg'
     },
     {
-      id: 'tyler',
-      name: 'Tyler McGinnis',
-      handle: '@tylermcginnis',
-      avatarURL: config.origin + '/tyler.jpg'
+      id: 'salmon',
+      name: 'Smoked Salmon',
+      handle: '@Smokey',
+      avatarURL: config.origin + '/salmon.png'
     }
   ]
 }
@@ -54,7 +53,9 @@ const remove = (token, id) => {
     data.contacts = data.contacts.filter(c => c !== contact)
   }
 
-  return { contact }
+  return {
+    contact
+  }
 }
 
 module.exports = {
